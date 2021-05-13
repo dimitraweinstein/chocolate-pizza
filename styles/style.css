@@ -46,11 +46,38 @@ section {
 }
 
 header {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 10;
+    grid-template-rows: 2;
+    justify-content: flex-start;
     background-color: var(--color3);
-    height: var(--header-height);
     box-shadow: var(--shadow);
+    
+}
+
+#header-title {
+    background-color: var(--color3);
+}
+#delicious {
+    font-family: cursive;
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#subhead {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#header-logo {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column: 2;
+}
+
+.header-right {
+    display: flex;
+
 }
 
 footer {
@@ -66,10 +93,6 @@ h2 {
     font-weight: bold;
 }
 
-.gutter-right {
-    margin-right: 20px;
-}
-
 .main-logo {
     animation: pulse 5s infinite ease-in-out;
 }
@@ -81,7 +104,7 @@ header img {
 p {
     margin: var(--gutter);
 }
-  
+
 footer {
     position: fixed;
     width: 100%;
@@ -92,22 +115,3 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-  
-  @keyframes pulse {
-    20% {
-      transform: rotate3d(-10, -10, -10, 50deg) scale(1.2);
-    }
-
-    40% {
-        transform: rotate3d(10, 10, -10, 50deg) scale(1);
-    }
-
-    60% {
-        transform: rotate3d(-10, 10, 10, 50deg) scale(1.2);
-      }
-
-    80% {
-        transform: rotate3d(10, 10, 10, 50deg) scale(1);
-    }
-
-  }
