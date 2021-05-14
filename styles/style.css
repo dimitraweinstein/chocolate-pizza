@@ -42,44 +42,50 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
 }
 
 header {
-    display: grid;
-    grid-template-columns: 10;
-    grid-template-rows: 2;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: space-between;
     background-color: var(--color3);
     box-shadow: var(--shadow);
     
 }
 
 #header-title {
+    display: flex;
     background-color: var(--color3);
+    flex-direction: column;
+    align-items: flex-start;
 }
 #delicious {
+    display: flex;
     font-family: cursive;
-    grid-row: 1;
-    grid-column: 2;
+    font-weight: bolder;
+    font-style: italic;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -10px;
 }
 
 #subhead {
-    grid-row: 2;
-    grid-column: 2;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
 }
 
 #header-logo {
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column: 2;
+    height: 60px;
+    padding: 5px;
 }
 
-.header-right {
-    display: flex;
-
+.icon {
+    width: 20px;
+    height: 20px;
+    padding: 1px;
+    justify-items: flex-end;
 }
-
 footer {
     display: flex;
     justify-content: flex-end;
